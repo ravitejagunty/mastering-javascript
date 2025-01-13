@@ -88,3 +88,17 @@ Ternary operator executes the condition and outputs based on the executed condit
 if the condition is false the second part or the declaration after : is provided as output.
 */
 
+/* Empty values
+There are two of these values 'null' and 'undefined', they themselves are values and take the space however if a program cannot provide a meaning full value thats when
+we use null or undefined, most of the time it doesn't matter if you use null or undefined as they are interchangeable
+*/
+
+/* Automatic type conversion
+
+This is some of the weird javascript executions I can never understand, however javascript have a auto convert some types based on the next value in the operation
+example: 11 * null, output: 0
+example: "15" - 1, output: 14 - In here javascript auto converted the "5" into 5 as number
+example: "15" + 1, output: 151 - In here javascript left 5 as string without converting into a number and concatnated 1 to 5
+example: "five" * 2, output: Nan - Javascript couldn't understand what to perform here and hence it has provided the output as NaN which is occur when output is not a number
+
+*/

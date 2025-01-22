@@ -57,10 +57,12 @@ array.unshift(4)
 /**
  * Removing the element at certain location in the array
  * array.splice(start, deleteCount, item1, item2, ..., itemN);
+ * with splice method original array is altered
  */
 array.splice(1,2)
 /**
- * output: [14,2345,12], splice allow to remove, add or replace the elements in array
+ * output of splice: [14,57]
+ * output of array: [3,43,2345,12], splice allow to remove, add or replace the elements in array
  * In the above example we have removed the elements at index 1 and 2 which is 57 and 43
  * Other way one can use splice is to add elements
  * add: array.splice(2, 0, 'a', 'b');  No elements removed, adds 'a' and 'b' at index 2
@@ -70,3 +72,42 @@ array.splice(1,2)
  */
 
 
+/**
+ * finding the index of the element in an array from beginning
+ */
+array.indexOf('y')
+/**
+ * output: 2, as the first occurrence of 'y' comes at index 2 in the array
+ */
+
+/**
+ * finding the index of the element from reverse
+ */
+array.lastIndexOf('y')
+/**
+ * output: 2, as the first occurrence of 'y' from the reverse side of the array is also 2 in this case
+ * However if the array has multiple occurrences of 'y' example: [14,'x','y','b','y',12]
+ */
+array.lastIndexOf('y')
+/**
+ * output: 4, as the first occurrence of 'y' is at index 4 now coming from the reverse of the array.
+ */
+
+
+/**
+ * slicing the array to desired values using .slice method
+ * slice(startIndex, endIndex)
+ * slice method takes two parameters startIndex which is inclusive and endIndex which is exclusive
+ * endIndex is optional and if only start index is provided the method will return all elements starting from the index value provided 
+ * [14,'x','y','b','y',12]
+ * with slice method original array is not altered
+ */
+array.slice(2,4)
+/**
+ * output of slice method: [14,'x','y',12],  in this scenario element at index 2 is retained but elements at index 3 and 4 are removed from the array.
+ * output of array: [14,'x','y','b','y',12] array still stays the same as with slice method the array is not altered
+ */
+array.slice(2)
+/**
+ * output: ['y',12]. in this scenario array removes elements from 0 and 1 index as the start of array is from 2 element.
+ */

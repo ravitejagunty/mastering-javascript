@@ -40,8 +40,18 @@ array.pop()
  */
 array.shift()
 /**
- * output: [14,57,43,2345,12]
- * 2 is removed from the index 0 and as first element
+ * output: 2
+ * 2 is removed from the index 0 and as first element and the array is now [14, 57, 43, 2345, 12]
+ */
+
+
+/**
+ * Adding the first element in the array
+ */
+array.unshift(4)
+/**
+ * output: 6, which is the length of the array
+ * 3 is now added at the index 0 and as first element and the array is now [3, 14, 57, 43, 2345, 12]
  */
 
 /**
@@ -58,4 +68,5 @@ array.splice(1,2)
  * replace: array.splice(1, 2, 'x', 'y');
  * output: [14,'x','y','b',12]
  */
+
 

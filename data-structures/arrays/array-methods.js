@@ -111,3 +111,23 @@ array.slice(2)
 /**
  * output: ['y',12]. in this scenario array removes elements from 0 and 1 index as the start of array is from 2 element.
  */
+
+/**
+ * let array = [14,'x','y','b','y',12]
+ * spread or rest parameter operator is usually represent by ...
+ */
+let spreadArray = [1,5,...array,24,37] //output: [1,5,14,'x','y','b','y',12,24,37], spread operator allows to shorten to call the array and very useful in functions
+
+//example
+function max(...number){
+    let result = -infinity;
+    for(let number of numbers){
+        if(number > result){
+            result = number
+        }
+    }
+    return result
+}
+inputNumbers = [1,4,56,76,123,2,45,3432]
+max(...inputNumbers); //the representation is similar to max(1,4,56,76,123,2,45,3432)
+//ouput: 3432, but instead of passing the numbers directly into the input parameter of max function we are just using the ... operator to that work for us.

@@ -49,3 +49,16 @@ class personOne {
 let personDetail = new personOne('male') //Instantiating the class with the constructor property 
 console.log(personDetail.humanName('mastering javascript')); // Accessing the method inside the class
 //output: I'm a male and my name is mastering javascript
+
+
+/**
+ * Overriding properties derived by default from the class
+ * If a new property is added to the class which may or may not be part of the prototype, the property os added to the object itself
+ */
+
+personOne.prototype.age = 32;
+console.log(personDetail.age) //output: 32
+personDetail.age = 45
+console.log(personDetail.age) //output: 45
+
+//The perpoerty age is now part of personDetail object and the prototype.age will not have any affect on the object.

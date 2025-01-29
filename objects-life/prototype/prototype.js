@@ -16,7 +16,7 @@ const obj = {}
 console.log(Object.getPrototypeOf(obj)) // output: Object.prototype
 console.log(Object.getPrototypeOf(Object.prototype)) //null
 
-//since we have hit the end of the road on lify cycle of object the outcome of Object.getPrototypeOf(Object.prototype) outputs nll and terminates the chain.
+//since we have hit the end of the road on lify cycle of object the outcome of Object.getPrototypeOf(Object.prototype) outputs null and terminates the chain.
 
 const originalObject = { name: "Alice" };
 const newObject = Object.create(originalObject);
